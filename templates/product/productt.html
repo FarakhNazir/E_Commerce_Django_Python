@@ -1,0 +1,77 @@
+{% extends "base/base.html"%}
+
+{%  block start %}
+
+<section class="section-content padding-y bg">
+    <div class="container">
+    
+    <!-- ============================ COMPONENT 1 ================================= -->
+  
+    <div>
+      {% for image in product.product_images.all %}
+      <a href="#" class="item-thumb" > <img src="/media/{{image.image}}">  </a>
+
+      {% endfor %}
+    </div>
+    
+    <div class="rating-wrap my-3">
+        <ul class="rating-stars">
+            <li style="width:80%" class="stars-active"> 
+                <i class="fa fa-star"></i> <i class="fa fa-star"></i> 
+                <i class="fa fa-star"></i> <i class="fa fa-star"></i> 
+                <i class="fa fa-star"></i> 
+            </li>
+            <li>
+                <i class="fa fa-star"></i> <i class="fa fa-star"></i> 
+                <i class="fa fa-star"></i> <i class="fa fa-star"></i> 
+                <i class="fa fa-star"></i> 
+            </li>
+        </ul>
+        <small class="label-rating text-muted">132 reviews</small>
+        <small class="label-rating text-success"> <i class="fa fa-clipboard-check"></i> 154 orders </small>
+    </div> <!-- rating-wrap.// -->
+    
+   
+    
+    <p>{{product.product_description}}</p>
+    
+    
+    <dl class="row">
+      <dt class="col-sm-3">Model#</dt>
+      <dd class="col-sm-9">Odsy-1000</dd>
+    
+      <dt class="col-sm-3">Color</dt>
+      <dd class="col-sm-9">Brown</dd>
+    
+      <dt class="col-sm-3">Delivery</dt>
+      <dd class="col-sm-9">Russia, USA, and Europe </dd>
+    </dl>
+    
+    <hr>
+        <div class="form-row">
+            <div class="form-group col-md flex-grow-0">
+                <label>Quantity</label>
+                <div class="input-group mb-3 input-spinner">
+                  <div class="input-group-prepend">
+                    <button class="btn btn-light" type="button" id="button-plus"> + </button>
+                  </div>
+                  <input type="text" class="form-control" value="1">
+                  <div class="input-group-append">
+                    <button class="btn btn-light" type="button" id="button-minus"> − </button>
+                  </div>
+                </div>
+            </div> <!-- col.// -->
+            
+            <!-- col.// -->
+        </div> <!-- row.// -->
+    
+        <a href="#" class="btn  btn-primary"> Buy now </a>
+        <a href="#" class="btn  btn-outline-primary"> <span class="text">Add to cart</span> <i class="fas fa-shopping-cart"></i>  </a>
+   
+    <!-- ============================ COMPONENT 1 END .// ================================= -->
+    
+
+    </div>
+    </section>
+
+{% endblock %}
